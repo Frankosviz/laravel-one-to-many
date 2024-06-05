@@ -40,6 +40,39 @@
             </table>
         </div>
     </div>
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="w-100">
+            <table class="f-d-table">
+                <tr>
+                    <th class="text-center fw-bold gradientColor fs-4">Id</th>
+                    <th class="text-center fw-bold gradientColor fs-4">Name</th>
+                    <th class="text-center fw-bold gradientColor fs-4">Slug</th>
+                    <th class="text-center fw-bold gradientColor fs-4">Created at</th>
+                    <th class="text-center fw-bold gradientColor fs-4">Updated at</th>
+                    <th class="text-center fw-bold gradientColor fs-4"><a class="f-d-button" href="{{ route('admin.types.create') }}"><i class="fa-solid fa-plus"></i></th></a>
+                    
+                </tr>
+                @foreach ($types as $type)
+                    <tr>
+                        <td class="green">{{ $type->id }}</td>
+                        <td class="green">{{ $type->name}}</td>
+                        <td class="green">{{ $type->slug }}</td>
+                        <td class="green">{{ $type->created_at }}</td>
+                        <td class="green">{{ $type->updated_at }}</td>
+                        <td class="d-flex align-items-center">
+                            <a href="{{ route('admin.types.show', $project) }}" class="f-d-button">
+                                <i class="fa-solid fa-eye">
+                                </i>
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                @endforeach
+            </table>
+        </div>
+    </div>
 
 
 </section>
