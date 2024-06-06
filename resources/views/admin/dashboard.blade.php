@@ -52,24 +52,7 @@
                     <th class="text-center fw-bold gradientColor fs-4"><a class="f-d-button" href="{{ route('admin.types.create') }}"><i class="fa-solid fa-plus"></i></th></a>
                     
                 </tr>
-                @foreach ($types as $type)
-                    <tr>
-                        <td class="green">{{ $type->id }}</td>
-                        <td class="green">{{ $type->name}}</td>
-                        <td class="green">{{ $type->slug }}</td>
-                        <td class="green">{{ $type->created_at }}</td>
-                        <td class="green">{{ $type->updated_at }}</td>
-                        <td class="d-flex align-items-center">
-                            <a href="{{ route('admin.types.show', $project) }}" class="f-d-button">
-                                <i class="fa-solid fa-eye">
-                                </i>
-                            </a>
-                        </td>
-                        <td>
-                            
-                        </td>
-                    </tr>
-                @endforeach
+                
             </table>
         </div>
     </div>
